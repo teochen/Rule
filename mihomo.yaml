@@ -2,7 +2,7 @@ proxy-groups:
 #分流分组
   - {name: 手动切换, type: select, include-all: true, icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Static.png }
   - {name: 全球加速, type: select, proxies: [香港, 美国, 新加坡,CF, 手动切换, 自动选择, DIRECT], icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png }
-  - {name: OpenAi,   type: select, proxies: [美国, 香港,手动切换, CF], icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png }
+  - {name: Ai,   type: select, proxies: [美国, 香港,手动切换, CF], icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png }
   - {name: Youtube, type: select, proxies: [香港, CF, 美国, 新加坡, 手动切换, 自动选择, DIRECT], icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/YouTube.png }
   - {name: 国际媒体, type: select, proxies: [香港, 美国, 新加坡, CF, 手动切换, 自动选择, DIRECT], icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Streaming.png }
   - {name: Telegram, type: select, proxies: [新加坡, 香港, 美国, CF, 手动切换, 自动选择], icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png }
@@ -21,7 +21,7 @@ proxy-groups:
 # 分流规则 
 rule-providers:
   AdBlock:     {behavior: domain,    interval: 86400, format: text, type: http, url: https://ghp.ci/https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt ,                                           path: ./ruleset/anti-ad-clash.txt }
-  OpenAi:      {behavior: classical, interval: 86400, format: yaml, type: http, url: https://ghp.ci/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml ,                      path: ./ruleset/OpenAi.yaml       }
+  Ai:      {behavior: classical, interval: 86400, format: yaml, type: http, url: https://ghp.ci/https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/master/AI.list ,                      path: ./ruleset/OpenAi.yaml       }
   YouTube:     {behavior: classical, interval: 86400, format: yaml, type: http, url: https://ghp.ci/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml ,  path: ./ruleset/YouTube.yaml  }
   GlobalMedia: {behavior: classical, interval: 86400, format: yaml, type: http, url: https://ghp.ci/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia_Classical.yaml ,  path: ./ruleset/GlobalMedia.yaml  }
   Telegram:    {behavior: classical, interval: 86400, format: yaml, type: http, url: https://ghp.ci/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml ,                  path: ./ruleset/Telegram.yaml     }
@@ -38,7 +38,7 @@ rules:
   - DOMAIN-SUFFIX,season.beauty,DIRECT
   - DOMAIN,ai.hubermanlab.com,美国
   - DOMAIN,1ptba.com,DIRECT
-  - RULE-SET,OpenAi,OpenAi
+  - RULE-SET,Ai,Ai
   - RULE-SET,GlobalMedia,国际媒体
   - RULE-SET,Telegram,Telegram
   - RULE-SET,ProxyLite,全球加速
