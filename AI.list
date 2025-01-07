@@ -52,6 +52,7 @@ DOMAIN-SUFFIX,generativeai.google
 DOMAIN,api.github.com
 DOMAIN-SUFFIX,aistudio.google.com
 DOMAIN-SUFFIX,notebooklm.google.com
+DOMAIN-SUFFIX,notebooklm.google
 DOMAIN-SUFFIX,geller-pa.googleapis.com
 DOMAIN-SUFFIX,generativelanguage.googleapis.com
 DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
