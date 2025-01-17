@@ -104,3 +104,6 @@ DOMAIN-SUFFIX,conman.org
 DOMAIN-SUFFIX,bortzmeyer.org
 DOMAIN,gateway.ai.cloudflare.com
 DOMAIN,api.github.com
+
+# Others
+DOMAIN-SUFFIX,ai.hubermanlab.com
