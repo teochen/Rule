@@ -106,4 +106,4 @@ DOMAIN,gateway.ai.cloudflare.com
 DOMAIN,api.github.com
 
 # Others
-DOMAIN-SUFFIX,ai.hubermanlab.com
+DOMAIN,ai.hubermanlab.com
