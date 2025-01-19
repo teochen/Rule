@@ -1,5 +1,6 @@
 #Others
 DOMAIN,ai.hubermanlab.com
+
 # OpenAI
 AND,((DOMAIN-KEYWORD,chatgpt-async-webps-prod-),(DOMAIN-SUFFIX,webpubsub.azure.com))
 AND,((DOMAIN-KEYWORD,openaicom-api-),(DOMAIN-SUFFIX,azurefd.net))
@@ -106,6 +107,3 @@ DOMAIN-SUFFIX,conman.org
 DOMAIN-SUFFIX,bortzmeyer.org
 DOMAIN,gateway.ai.cloudflare.com
 DOMAIN,api.github.com
-
-# Others
-DOMAIN,ai.hubermanlab.com
