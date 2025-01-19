@@ -36,9 +36,6 @@ rule-providers:
 rules:
   - RULE-SET,AdBlock,AdBlock
   - DOMAIN-SUFFIX,season.beauty,DIRECT
-  - DOMAIN,ai.hubermanlab.com,美国
-  - DOMAIN-SUFFIX,notebooklm.google.com,AI
-  - DOMAIN-SUFFIX,notebooklm.google,AI
   - DOMAIN,1ptba.com,DIRECT
   - RULE-SET,Ai,Ai
   - RULE-SET,GlobalMedia,国际媒体
