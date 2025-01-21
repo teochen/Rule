@@ -37,6 +37,7 @@ rules:
   - RULE-SET,AdBlock,AdBlock
   - DOMAIN-SUFFIX,season.beauty,DIRECT
   - DOMAIN,1ptba.com,DIRECT
+  - DOMAIN,ai.hubermanlab.com,Ai
   - RULE-SET,Ai,Ai
   - RULE-SET,GlobalMedia,国际媒体
   - RULE-SET,Telegram,Telegram
