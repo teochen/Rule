@@ -1,11 +1,11 @@
-#!name=Owl Pro
-#!desc=Owl Pro Lifetime Subscription
-#!author=Claude
+#!name=Owl Subscription
+#!desc=Owl Phone & Tablet subscription
+#!author=teochen
 #!homepage=https://github.com/teochen/Rule
-#!icon=https://raw.githubusercontent.com/teochen/Rule/refs/heads/main/owl.png
+#!icon=https://raw.githubusercontent.com/teochen/Rule/main/icon/owl.png
 
 [Script]
-http-response ^https:\/\/.*\.superwall.*\.com\/.*\/response_body.* script-path=https://raw.githubusercontent.com/teochen/Rule/refs/heads/main/owl.js, requires-body=true, timeout=10, tag=OwlPro
+http-response ^https:\/\/api\.superwall\.me\/api\/v1\/static_config script-path=https://raw.githubusercontent.com/teochen/Rule/refs/heads/main/owl.js, requires-body=true, timeout=10, tag=Owl Subscription
 
 [MITM]
-hostname = *.superwall*.com
+hostname = api.superwall.me
