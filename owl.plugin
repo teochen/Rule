@@ -11,7 +11,7 @@ http-response ^https:\/\/.*\.superwall.*\.com\/.*\/response_body.* script-path=h
 hostname = *.superwall*.com
 
 [Script]
-script-path=https://raw.githubusercontent.com/example/owl.js,tag=Owl Pro,type=http-response,pattern=^https:\/\/.*\.superwall.*\.com\/.*\/response_body.*,requires-body=true,max-size=0,timeout=10
+script-path=https://raw.githubusercontent.com/teochen/Rule/refs/heads/main/owl.js,tag=Owl Pro,type=http-response,pattern=^https:\/\/.*\.superwall.*\.com\/.*\/response_body.*,requires-body=true,max-size=0,timeout=10
 
 [Script Content]
 let obj = JSON.parse($response.body);
