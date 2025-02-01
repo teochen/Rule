@@ -30,8 +30,10 @@ const response = {
 }
 
 const handlers = {
+  // 处理订阅状态请求
   'subscribers/(.+)$': response,
   
+  // 处理商品列表请求
   'offerings$': {
     "offerings": [
       {
@@ -61,4 +63,4 @@ if (body) {
   $done({ body })
 } else {
   $done({})
-}
+} 
