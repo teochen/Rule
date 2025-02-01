@@ -1,0 +1,42 @@
+#!name=Owl Pro
+#!desc=Owl Pro Lifetime Subscription
+#!author=Claude
+#!homepage=https://github.com/example
+#!icon=https://raw.githubusercontent.com/example/icon/owl.png
+
+[Script]
+http-response ^https:\/\/.*\.superwall.*\.com\/.*\/response_body.* script-path=https://raw.githubusercontent.com/example/owl.js, requires-body=true, timeout=10, tag=OwlPro
+
+[MITM]
+hostname = *.superwall*.com
+
+[Script]
+script-path=https://raw.githubusercontent.com/example/owl.js,tag=Owl Pro,type=http-response,pattern=^https:\/\/.*\.superwall.*\.com\/.*\/response_body.*,requires-body=true,max-size=0,timeout=10
+
+[Script Content]
+let obj = JSON.parse($response.body);
+
+// 简化响应,只保留必要的终身订阅信息
+obj = {
+  "products": [{
+    "store_product": {
+      "store": "APP_STORE",
+      "product_identifier": "app.vogelhaus.owl.pro.lifetime"
+    },
+    "sw_composite_product_id": "app.vogelhaus.owl.pro.lifetime",
+    "entitlements": []
+  }],
+  "trigger_options": [],
+  "product_identifier_groups": [],
+  "paywall_responses": [{
+    "presentation_condition": "NON_GATED",
+    "feature_gating": "NON_GATED",
+    "local_notifications": [],
+    "products": [{
+      "product_id": "app.vogelhaus.owl.pro.lifetime",
+      "product": "primary"
+    }]
+  }]
+};
+
+$done({body: JSON.stringify(obj)});
