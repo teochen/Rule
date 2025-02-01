@@ -1,0 +1,11 @@
+#!name=Kylin VIP
+#!desc=Kylin 永久会员解锁
+#!author=teochen
+#!homepage=https://github.com/teochen/Rule
+#!icon=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Final.png
+
+[Script]
+http-response ^https:\/\/api\.revenuecat\.com\/v1\/(subscribers|offerings) script-path=https://raw.githubusercontent.com/teochen/Rule/refs/heads/main/jiguang.js, requires-body=true, binary-body-mode=false, timeout=10, tag=Kylin Lifetime
+
+[MITM]
+hostname = api.revenuecat.com 
