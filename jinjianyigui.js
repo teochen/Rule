@@ -2,7 +2,7 @@
 衣橱管家内购解锁脚本
 使用方法：
 [rewrite_local]
-^https://closet\.jinjian\.tech/api/v3/user url script-response-body https://raw.githubusercontent.com/yourusername/jinjianyigui.js
+^https://closet\.jinjian\.tech/api/v3/user url script-response-body https://raw.githubusercontent.com/teochen/Rule/refs/heads/main/jinjianyigui.js
 [mitm]
 hostname = closet.jinjian.tech
 */
