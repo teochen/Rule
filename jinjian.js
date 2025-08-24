@@ -14,10 +14,8 @@ function modifyObject(obj) {
     for (let key in obj) {
         if (obj.hasOwnProperty(key)) {
             if (typeof obj[key] === 'object' && obj[key] !== null) {
-                // 递归处理嵌套对象
                 modifyObject(obj[key]);
             } else {
-                // 使用原混淆脚本中的确切值
                 if (key === 'type') {
                     obj[key] = 'studio.2players.wardrobe.pro.lifetime';
                 }
@@ -27,13 +25,25 @@ function modifyObject(obj) {
                 if (key === 'expired_at') {
                     obj[key] = '2099-09-09';
                 }
-                // 确保自动续订为true
                 if (key === 'apple_app_store_auto_renew') {
                     obj[key] = true;
                 }
             }
         }
     }
+}
+
+// 确保有必要的字段
+if (body.data) {
+    // 保持原有的购买时间戳
+    if (!body.data.original_purchase_date_ms) {
+        body.data.original_purchase_date_ms = "1663136602000";
+    }
+    
+    // 可能需要的额外字段
+    body.data.is_active = true;
+    body.data.is_valid = true;
+    body.data.status = "active";
 }
 
 modifyObject(body);
