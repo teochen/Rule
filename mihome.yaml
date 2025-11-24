@@ -1,0 +1,61 @@
+# =======================================================
+# 覆写配置：仅包含 TUN 和 DNS (保留现有 rules)
+# =======================================================
+
+# === TUN/Core 设置 (修复重启后卡死的问题) ===
+tun:
+  enable: true
+  stack: gvisor # 切换到兼容性更好的堆栈
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - 0.0.0.0:53
+
+# === DNS 设置 (修正内网路由冲突，解决内网断连) ===
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: false
+  enhanced-mode: fake-ip
+
+  # 关键新增：fake-ip-filter
+  # 确保内网域名返回真实 IP，避免 TUN/FakeIP 模式下流量被错误路由，这是内网稳定运行的关键！
+  fake-ip-filter:
+    - "+.crland.hk"
+    - "+.crc.com.cn"
+    - "+.crland.cn"
+    - "+.crland.com.cn"
+    - "+.crcloud.com"
+    - "+.localhost"
+    - "+.local"
+
+  # 优先使用内网 DNS，可以提高解析速度，且 nameserver-policy 会覆盖这里的域名查询行为
+  nameserver:
+    - 10.0.128.14
+    - 10.0.128.15
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+
+  fallback:
+    - https://9.9.9.9/dns-query
+
+  fallback-filter:
+    geoip: true
+
+  # === 域名分流策略 ===
+  nameserver-policy:
+    "+.crland.hk":
+      - 10.0.128.14
+      - 10.0.128.15
+    "+.crc.com.cn":
+      - 10.0.128.14
+      - 10.0.128.15
+    "+.crland.cn":
+      - 10.0.128.14
+      - 10.0.128.15
+    "+.crland.com.cn":
+      - 10.0.128.14
+      - 10.0.128.15
+    "+.crcloud.com":
+      - 10.0.128.14
+      - 10.0.128.15
