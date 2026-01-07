@@ -183,11 +183,6 @@ rule-providers:
     url: https://ruleset.skk.moe/Clash/non_ip/microsoft_cdn.txt
     path: ./rule_set/sukkaw_ruleset/microsoft_cdn_non_ip.txt
 
-  microsoft_non_ip:
-    <<: *RuleSet_classical
-    url: https://ruleset.skk.moe/Clash/non_ip/microsoft.txt
-    path: ./rule_set/sukkaw_ruleset/microsoft_non_ip.txt
-
   # 软件更新、操作系统等大文件下载
   download_domainset:
     <<: *RuleSet_domain
@@ -257,7 +252,6 @@ rules:
   - RULE-SET,download_non_ip,🚀 策略选择
   - RULE-SET,microsoft_cdn_non_ip,DIRECT
   - RULE-SET,apple_cn_non_ip,DIRECT
-  - RULE-SET,microsoft_non_ip,Microsoft
   - RULE-SET,global_non_ip,🚀 策略选择
   - RULE-SET,domestic_non_ip,DIRECT
   - RULE-SET,direct_non_ip,DIRECT
