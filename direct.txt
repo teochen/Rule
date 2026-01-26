@@ -1,6 +1,6 @@
-dler.pro
-dler.cloud
-season.beauty
-7931013.xyz
-tlscontact.com
-icems.indevs.in
+DOMAIN-SUFFIX,dler.pro
+DOMAIN-SUFFIX,dler.cloud
+DOMAIN-SUFFIX,season.beauty
+DOMAIN-SUFFIX,7931013.xyz
+DOMAIN-SUFFIX,tlscontact.com
+DOMAIN-SUFFIX,icems.indevs.in
