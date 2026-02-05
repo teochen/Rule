@@ -63,7 +63,7 @@ DOMAIN-SUFFIX,learning.google.com
 DOMAIN-SUFFIX,deepmind.com
 DOMAIN-SUFFIX,deepmind.google
 DOMAIN-KEYWORD,notebooklm.google
-DOMAIN-SUFFIX,notebooklm.google.com
+DOMAIN,notebooklm.google.com
 DOMAIN-SUFFIX,nootbooklm-pa.googleapis.com
 DOMAIN-SUFFIX,geller-pa.googleapis.com
 DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
